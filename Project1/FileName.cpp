@@ -26,14 +26,16 @@ char** ReserveArray(int& row, int& column) {
 int shot = 0; // 0-> Me 1->Computer
 
 bool IsEmptyCoordinate(char** array, int& row, int& column) {
-    if (array[row][column] == '-') {
-        return false;
-    }
-    else if (array[row][column] == 'X') {
-        return false;
-    }
-    else {
-        return true;
+    if (row < 10 && row >= 0 && column < 10 && column >= 0) {
+        if (array[row][column] == '-') {
+            return false;
+        }
+        else if (array[row][column] == 'X') {
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 }
 
@@ -263,7 +265,7 @@ int My_Str_To_Num(string& str) {
 }
 
 void Clear() {
-    this_thread::sleep_for(chrono::seconds(1));
+    this_thread::sleep_for(chrono::seconds(0));
     system("cls");
 }
 

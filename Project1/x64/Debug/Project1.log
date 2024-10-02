@@ -1,4 +1,5 @@
 ﻿  FileName.cpp
-C:\Users\ASUS\Desktop\Battleshipp\Project1\Project1\FileName.cpp(280,13): warning C4326: return type of 'main' should be 'int' instead of 'void'
-C:\Users\ASUS\Desktop\Battleshipp\Project1\Project1\FileName.cpp(281,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\ASUS\Desktop\Battleshipp\Project1\Project1\FileName.cpp(282,13): warning C4326: return type of 'main' should be 'int' instead of 'void'
+C:\Users\ASUS\Desktop\Battleshipp\Project1\Project1\FileName.cpp(283,15): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\ASUS\Desktop\Battleshipp\Project1\Project1\FileName.cpp(40): warning C4715: 'IsEmptyCoordinate': not all control paths return a value
   Project1.vcxproj -> C:\Users\ASUS\Desktop\Battleshipp\Project1\x64\Debug\Project1.exe
