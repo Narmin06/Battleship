@@ -269,6 +269,11 @@ void Clear() {
     system("cls");
 }
 
+void Clear1() {
+    this_thread::sleep_for(chrono::seconds(1));
+    system("cls");
+}
+
 void DeleteArray(char**& array, int& row, int& column) {
 
     for (size_t i = 0; i < row; i++)
@@ -291,7 +296,7 @@ void main() {
     InitArray(array2, row, column);
 
     while (true) {
-        Clear();
+        Clear1();
         ShowArray(array1, array2, row, column);
         if (shot == 0) {
             string enter_row_str;
@@ -313,8 +318,9 @@ void main() {
                         OurAttack(array2, enter_row, enter_column);
                         ShowArray(array1, array2, row, column);
                         if (AllShips(array2, row, column)) {
-                            cout << "Congratulations, you are the winner!" << endl;
-                            Sleep(500);
+                            MySetColor(2, 0);
+                            cout << endl << "Congratulations, you are the winner!" << endl;
+                            MySetColor(7, 0);
                             break;
                         }
                     }
@@ -322,12 +328,13 @@ void main() {
                         MySetColor(6, 0);
                         cout << "Please enter correct row and column." << endl;
                         MySetColor(7, 0);
-                        Sleep(1000);
                         continue;
                     }
                 }
                 else {
+                    MySetColor(6, 0);
                     cout << "This coordinate has been hit.Enter a new coordinate.";
+                    MySetColor(7, 0);
                     continue;
                 }
             }
@@ -335,7 +342,6 @@ void main() {
                 MySetColor(6, 0);
                 cout << "Please enter correct row and column." << endl;
                 MySetColor(7, 0);
-                Sleep(1000);
                 continue;
             }
         }
@@ -344,8 +350,9 @@ void main() {
             ComputerAttack(array1, row, column);
             ShowArray(array1, array2, row, column);
             if (AllShips(array1, row, column)) {
-                cout << "The computer has defeated you!" << endl;
-                Sleep(500);
+                MySetColor(4, 0);
+                cout << endl << "The computer has defeated you!" << endl;
+                MySetColor(7, 0);
                 break;
             }
         }
