@@ -2,7 +2,7 @@
 #include<iomanip>
 #include<Windows.h>
 #include<chrono>
-#include <thread> 
+#include <thread>
 using namespace std;
 
 void MySetColor(int fg, int bg) {
@@ -25,7 +25,7 @@ char** ReserveArray(int& row, int& column) {
 
 int shot = 0; // 0-> Me 1->Computer
 
-bool IsEmptyCoordinate(char** array, int& row, int& column) {
+bool IsEmptyCoordinate(char**& array, int& row, int& column) {
     if (row < 10 && row >= 0 && column < 10 && column >= 0) {
         if (array[row][column] == '-') {
             return false;
