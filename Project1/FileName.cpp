@@ -296,9 +296,9 @@ void main() {
     InitArray(array2, row, column);
 
     while (true) {
-        Clear1();
-        ShowArray(array1, array2, row, column);
         if (shot == 0) {
+            Clear1();
+            ShowArray(array1, array2, row, column);
             string enter_row_str;
             cout << endl << "Enter row(1-10): ";
             cin >> enter_row_str;
